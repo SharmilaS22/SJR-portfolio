@@ -49,7 +49,7 @@ body {
   background-color: var(--light);
 }
 .bg-dark-theme {
-  background-color: var(--dark);
+  background-color: var(--dark) !important;
 }
 .text-primary-theme {
   color: var(--primary);
