@@ -14,7 +14,7 @@ const Card = ({ title, imageurl, imagealt, content, time, id }) => {
         <h6 className='card-subtitle mb-2 text-muted'>{time}</h6>
         <p className='card-text'>{content + "..."}</p>
         <Button color='primary'>
-          <Link to={`/work/${id}`} className='class-link'>
+          <Link to={`/${id}`} className='class-link'>
             Read More <TrendingFlatSharpIcon />
           </Link>
         </Button>

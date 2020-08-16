@@ -6,8 +6,10 @@ import Contact from "../src/components/layout/Contact";
 import AlertBox from "../src/components/layout/AlertBox";
 
 import Home from "../src/components/homePage/Home";
+import Display from "../src/components/viewPage/Display";
+import Login from "../src/components/auth/Login";
 
-import Comment from "./components/viewPage/Comment";
+import Work from "./components/homePage/Work";
 
 import { ThemeProvider, Container } from "@material-ui/core";
 import Theme from "./Theme";
@@ -25,12 +27,12 @@ function App() {
           <Router>
             <div>
               <Navbar />
-              <Route exact path='/' component={Comment} />
+              <Route exact path='/' component={Work} />
               <Container maxWidth='md'>
                 <Switch>
-                  <Route exact path='/work/:id' component={Comment} />
+                  <Route exact path='/:id' component={Display} />
                   <Route exact path='/admin' component={Comment} />
-                  <Route exact path='/auth' component={Comment} />
+                  <Route exact path='/auth' component={Login} />
                 </Switch>
                 <AlertBox />
               </Container>

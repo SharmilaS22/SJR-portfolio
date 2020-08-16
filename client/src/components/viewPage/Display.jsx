@@ -1,0 +1,41 @@
+import React, { useState, useEffect } from "react";
+
+import Comment from "./Comment";
+import ContentsView from "./ContentsView";
+import LikeComment from "./LikeComment";
+import PhotoCredit from "./PhotoCredit";
+
+import axios from "axios";
+
+const Display = ({ match }) => {
+    
+  const [works, setWorks] = useState({});
+  const id = match.params.id;
+
+  const loadWorks = async () => {
+    const res = await axios
+      .get(`/api/view/${id}`)
+      .then(response => response.data)
+      .catch(err => console.log(err));
+    setWorks(res);
+  }
+  useEffect(() => { loadWorks();  },
+      [works]
+    );
+
+  return (
+    <div>
+      <ContentsView
+        title={works.title}
+        content={works.content}
+        imagealt={works.title}
+        imageurl={works.image}
+          />
+          <PhotoCredit name='Annie' />
+      <LikeComment likes={works.likes} comment={works.comments} id={id} />
+      <Comment id={id} />
+    </div>
+  );
+};
+
+export default Display;
