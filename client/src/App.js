@@ -7,6 +7,7 @@ import AlertBox from "../src/components/layout/AlertBox";
 
 import Home from "../src/components/homePage/Home";
 import Display from "../src/components/viewPage/Display";
+import AdminWorks from "../src/components/adminPage/AdminWorks";
 import Login from "../src/components/auth/Login";
 
 import Work from "./components/homePage/Work";
@@ -30,9 +31,9 @@ function App() {
               <Route exact path='/' component={Work} />
               <Container maxWidth='md'>
                 <Switch>
-                  <Route exact path='/:id' component={Display} />
-                  <Route exact path='/admin' component={Comment} />
+                  <Route exact path='/admin' component={AdminWorks} />
                   <Route exact path='/auth' component={Login} />
+                  <Route exact path='/:id' component={Display} />
                 </Switch>
                 <AlertBox />
               </Container>

@@ -56,7 +56,6 @@ router.post("/comment/:id", (req, res) => {
     text: req.body.commentText,
     date: date.getToday(),
   });
-  console.log("ehllo");
   aComment.save();
 
   Poem.findOneAndUpdate(
