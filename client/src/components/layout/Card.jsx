@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-
 import TrendingFlatSharpIcon from "@material-ui/icons/TrendingFlatSharp";
 import { Button } from "@material-ui/core";
 
@@ -22,5 +21,4 @@ const Card = ({ title, imageurl, imagealt, content, time, id }) => {
     </div>
   );
 };
-
 export default Card;

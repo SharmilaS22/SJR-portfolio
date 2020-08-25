@@ -1,4 +1,15 @@
 import React, {useState} from "react";
+import kebabCase from "lodash.kebabcase";
+import {
+  TableContainer,
+  Table,
+  Paper,
+  TableBody,
+  TableRow,
+  TableCell,
+  Grid,
+} from "@material-ui/core";
+import { DeleteRounded } from "@material-ui/icons";
 
 import Search from "./Search";
 
@@ -6,10 +17,6 @@ import axios from "axios";
 import { connect } from "react-redux";
 import { setAlert } from "../../actions/alert";
 import PropTypes from "prop-types";
-
-import kebabCase from "lodash.kebabcase";
-import { TableContainer, Table, Paper, TableBody, TableRow, TableCell, Grid } from "@material-ui/core";
-import { DeleteRounded } from "@material-ui/icons";
 
 const RemoveTab = ({ setAlert }) => {
     const [poem, setPoem] = useState({
@@ -29,7 +36,6 @@ const RemoveTab = ({ setAlert }) => {
             console.log(err);
         }
     };
-
     return (
         <div>
             <Search displayPoem={setPoem} />
@@ -65,9 +71,7 @@ const RemoveTab = ({ setAlert }) => {
         </div>
     );
 };
-
 RemoveTab.propTypes = {
     setAlert: PropTypes.func.isRequired
 };
-
 export default connect(null, { setAlert })(RemoveTab);

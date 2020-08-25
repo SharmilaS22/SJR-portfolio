@@ -13,8 +13,6 @@ const AlertBox = ({ alertProp }) =>
       </div>
     );
   });
-
-
 AlertBox.propTypes = {
   alertProp: PropTypes.array.isRequired,
 };

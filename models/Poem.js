@@ -1,7 +1,5 @@
 const {Schema, model} = require("mongoose");
-
 const { Comment, commentSchema } = require("./Comment");
-
 const poemSchema = new Schema({
   image: String,
   title: String,
@@ -13,5 +11,4 @@ const poemSchema = new Schema({
   },
   comments: [commentSchema],
 });
-
 module.exports = Poem = model("Poem", poemSchema);

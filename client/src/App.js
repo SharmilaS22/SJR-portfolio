@@ -10,15 +10,10 @@ import Display from "../src/components/viewPage/Display";
 import AdminWorks from "../src/components/adminPage/AdminWorks";
 import Login from "../src/components/auth/Login";
 
-import Work from "./components/homePage/Work";
-
 import { ThemeProvider, Container } from "@material-ui/core";
 import Theme from "./Theme";
-
 import {Provider} from "react-redux";
 import store from "./store";
-
-
 
 function App() {
   return (
@@ -28,7 +23,7 @@ function App() {
           <Router>
             <div>
               <Navbar />
-              <Route exact path='/' component={Work} />
+              <Route exact path='/' component={Home} />
               <Container maxWidth='md'>
                 <Switch>
                   <Route exact path='/admin' component={AdminWorks} />
@@ -37,7 +32,7 @@ function App() {
                 </Switch>
                 <AlertBox />
               </Container>
-              {/* <Contact /> */}
+              <Contact />
             </div>
           </Router>
         </Provider>

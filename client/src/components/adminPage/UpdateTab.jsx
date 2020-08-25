@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-
 import Search from "./Search";
 
 import axios from "axios";
@@ -60,7 +59,6 @@ const UpdateTab = ({ setAlert }) => {
             }
         });
     };
-
     return (
       <div>
         <Search displayPoem={setPoem} updated={setIsUpdated} />
@@ -138,9 +136,7 @@ const UpdateTab = ({ setAlert }) => {
       </div>
     );
 };
-
 UpdateTab.propTypes = {
   setAlert: PropTypes.func.isRequired,
 };
-
 export default connect(null, { setAlert })(UpdateTab);

@@ -1,5 +1,4 @@
 import { createMuiTheme } from "../node_modules/@material-ui/core/styles";
-
 const Theme = createMuiTheme({
   palette: {
     primary: {
@@ -10,5 +9,4 @@ const Theme = createMuiTheme({
     },
   }
 });
-
 export default Theme;

@@ -13,5 +13,4 @@ const Home = () => {
         <Services />
     </div>
 };
-
 export default Home;

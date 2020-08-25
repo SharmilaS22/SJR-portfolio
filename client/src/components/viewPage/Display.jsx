@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 import Comment from "./Comment";
 import ContentsView from "./ContentsView";
 import LikeComment from "./LikeComment";
 import PhotoCredit from "./PhotoCredit";
 
-import axios from "axios";
-
 const Display = ({ match }) => {
-    
   const [works, setWorks] = useState({});
   const id = match.params.id;
 
@@ -22,7 +20,6 @@ const Display = ({ match }) => {
   useEffect(() => { loadWorks();  },
       [works]
     );
-
   return (
     <div>
       <ContentsView
@@ -37,5 +34,4 @@ const Display = ({ match }) => {
     </div>
   );
 };
-
 export default Display;

@@ -1,5 +1,4 @@
 import React from "react"
-
 import TrendingFlatIcon from "@material-ui/icons/TrendingFlat";
 
 const About = () => {

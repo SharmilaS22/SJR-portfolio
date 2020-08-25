@@ -1,7 +1,6 @@
 import React from "react";
 
 const ContentsView = ({ title, imageurl, imagealt, content }) => {
-    
     return (
       <div style={{ margin: "3rem 0 1rem 0" }}>
         <h1 className=''>{title}</h1>
@@ -15,5 +14,4 @@ const ContentsView = ({ title, imageurl, imagealt, content }) => {
       </div>
     );
 }
-
 export default ContentsView;

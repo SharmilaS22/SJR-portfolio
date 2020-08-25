@@ -4,7 +4,6 @@ import axios from "axios";
 import PropTypes from "prop-types";
 
 import kebabCase from "lodash.kebabcase";
-
 import { Grid, TextField } from "@material-ui/core";
 import { SearchRounded } from "@material-ui/icons";
 
@@ -54,9 +53,7 @@ const Search = ({ displayPoem, updated }) => {
     </form>
     );
 };
-
 Search.propTypes = {
     displayPoem: PropTypes.func.isRequired
 };
-
 export default Search;

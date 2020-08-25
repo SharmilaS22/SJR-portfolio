@@ -5,7 +5,6 @@ import axios from "axios";
 
 const Work = () => {
   const [works, setWorks] = useState([]);
-
   const loadWorks = async () => {
     try {
       const res = await axios

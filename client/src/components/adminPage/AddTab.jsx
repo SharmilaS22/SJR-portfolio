@@ -6,7 +6,6 @@ import AddRoundedIcon from "@material-ui/icons/AddRounded";
 import axios from "axios";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-
 import { setAlert } from "../../actions/alert";
 
 const AddTab = ({ setAlert }) => {
@@ -107,7 +106,6 @@ const AddTab = ({ setAlert }) => {
     </div>
   );
 };
-
 AddTab.propTypes = {
   setAlert: PropTypes.func.isRequired,
 };

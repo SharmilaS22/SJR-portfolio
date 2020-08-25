@@ -4,11 +4,8 @@ const router = express.Router();
 const upperFirst = require("lodash.upperfirst");
 const lowerCase = require("lodash.lowercase");
 const kebabCase = require("lodash.kebabcase");
-
 const Poem = require("../../models/Poem");
-
 const date = require("../../date.js");
-
 /*--------------------/admin---------------------- */
 router
   .get("/", (req, res) => {
@@ -60,7 +57,6 @@ router
       }
     });
   });
-
 /*--------------------/admin/:poemTitle---------------------- */
 router
   .get("/:poemTitle", (req, res) => {

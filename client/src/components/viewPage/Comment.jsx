@@ -1,10 +1,8 @@
 import React, {useState} from "react";
-
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { setAlert } from "../../actions/alert";
 import axios from "axios";
-
 import { Grid, TextField } from "@material-ui/core";
 import { Send } from "@material-ui/icons";
 
@@ -23,12 +21,10 @@ const Comment = ({ setAlert, id }) => {
           "Content-Type": "application/json",
         },
       };
-
       const body = JSON.stringify({
         commentName: name,
         commentText: commentString,
       });
-  
       const {msg, type} = await axios
         .post(`/api/view/comment/${id}`, body, config)
         .then((response) => response.data)
@@ -47,7 +43,6 @@ const Comment = ({ setAlert, id }) => {
       };
     });
   };
-
   return (
     <div style={{ margin: "3rem 0" }}>
       <h3 className='text-secondary-theme m-2'>Add a Comment</h3>
@@ -81,7 +76,6 @@ const Comment = ({ setAlert, id }) => {
             name='email'
           />
         </Grid> */}
-
         <Grid>
           <TextField
             id='oultined-multiline-static'

@@ -4,7 +4,6 @@ import { TextField } from "@material-ui/core";
 import { connect } from "react-redux";
 import axios from "axios";
 import PropTypes from "prop-types";
-
 import {setAlert} from "../../actions/alert";
 
 const Login = ({ setAlert }) => {
@@ -13,10 +12,8 @@ const Login = ({ setAlert }) => {
     password: "",
   });
   const { username, password } = user;
-
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     try {
       const { msg, type } = await axios
         .post(

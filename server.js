@@ -1,17 +1,14 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 const mongoose = require("mongoose");
-
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
 //mongodb atlas connect
-// const user = process.env.DB_USER;
-// const password = process.env.DB_PASSWORD;
-const user = "sharmi45";
-const password = "sharmi123";
+const user = process.env.DB_USER;
+const password = process.env.DB_PASSWORD;
 mongoose
   .connect(
     `mongodb+srv://${user}:${password}@sharonjr-oq9ph.mongodb.net/sjrDB?retryWrites=true`,

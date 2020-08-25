@@ -24,13 +24,11 @@ const Navbar = () => {
                 Home
               </a>
             </li>
-
             <li className='nav-item mx-1'>
               <a className='nav-link' href='#blog'>
                 Blog
               </a>
             </li>
-
             <li className='nav-item mx-1'>
               <a className='nav-link' href='#contact'>
                 Contact
@@ -41,5 +39,4 @@ const Navbar = () => {
       </nav>
     );
 };
-
 export default Navbar;

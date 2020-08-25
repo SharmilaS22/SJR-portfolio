@@ -1,5 +1,4 @@
 const {Schema, model} = require("mongoose");
-
 const commentSchema = new Schema({
   name: {
     type: String,
@@ -11,7 +10,6 @@ const commentSchema = new Schema({
   },
   date: String,
 });
-
 module.exports = {
   Comment: model("Comment", commentSchema),
   commentSchema: commentSchema,

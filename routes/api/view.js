@@ -7,13 +7,10 @@ const lowerCase = require("lodash.lowercase");
 const Poem = require("../../models/Poem");
 const { Comment } = require("../../models/Comment");
 const date = require("../../date.js");
-
 /* ------------------- api/view --------------------- */
-
 router.get("/", (req, res) => {
   res.send("view page route");
 });
-
 /* ----------------to view a specific work---------------------- */
 router
   .get("/:id", (req, res) => {
@@ -30,9 +27,7 @@ router
   .post("/:poemTitle", (req, res) => {
     //no such page
   });
-
 /* -------------  /like/:id ----------- */
-
 router.post("/like/:id", (req, res) => {
   Poem.findOneAndUpdate(
     { _id: req.params.id },
@@ -47,9 +42,7 @@ router.post("/like/:id", (req, res) => {
     }
   );
 });
-
 /* -------------  /comment/:id ----------- */
-
 router.post("/comment/:id", (req, res) => {
   const aComment = new Comment({
     name: req.body.commentName,
@@ -57,7 +50,6 @@ router.post("/comment/:id", (req, res) => {
     date: date.getToday(),
   });
   aComment.save();
-
   Poem.findOneAndUpdate(
     { _id: req.params.id },
     { $push: { comments: aComment } },
@@ -71,5 +63,4 @@ router.post("/comment/:id", (req, res) => {
     }
   );
 });
-
 module.exports = router;

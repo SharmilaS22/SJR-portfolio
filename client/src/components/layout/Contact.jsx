@@ -4,16 +4,13 @@ import { TextField, Grid, Paper } from "@material-ui/core";
 import SendIcon from "@material-ui/icons/Send";
 
 import axios from "axios";
-//axios work
 
 const Contact = () => {
-
     const [client, setClient] = React.useState({
       name: "",
       email: "",
       message: "",
     });
-
     const handleChange = (event) => {
         const { name, value } = event.target;
         setClient(prev => {
@@ -23,9 +20,7 @@ const Contact = () => {
             };
         });
     }
-    
     const { name, email, message } = client;
-    
     const handleSubmit = (event) => {
         event.preventDefault();    
         setClient({
@@ -34,7 +29,6 @@ const Contact = () => {
           message: "",
         });
     }
-
   return (
     <div className='conatainer-fluid padding-10-15-0-15' id='contact'>
       <div className='text-center'>
@@ -64,7 +58,6 @@ const Contact = () => {
                   value={client.email}
                 />
               </Grid>
-
               <Grid>
                 <TextField
                   id='oultined-multiline-static'
@@ -80,7 +73,6 @@ const Contact = () => {
                   value={client.message}
                 />
               </Grid>
-
               <Grid>
                 <button type='submit' className='btn btn-outline-primary mt-3'>
                   Send <SendIcon />
@@ -93,5 +85,4 @@ const Contact = () => {
     </div>
   );
 };
-
 export default Contact;

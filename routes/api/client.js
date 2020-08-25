@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 
 const Client = require("../../models/Client");
-
 //    api/client
 router
   .get("/", (req, res) => {
@@ -29,5 +28,4 @@ router
       }
     });
   });
-
 module.exports = router;

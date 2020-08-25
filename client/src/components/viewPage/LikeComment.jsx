@@ -1,13 +1,15 @@
 import React, { useState } from "react";
+import { Paper, Grid, Button } from "@material-ui/core";
+import {
+  InsertCommentRounded,
+  FavoriteBorderRounded,
+  FavoriteRounded,
+} from "@material-ui/icons";
 
 import axios from "axios";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { setAlert } from "../../actions/alert";
-
-import { Paper, Grid, Button } from "@material-ui/core";
-import { InsertCommentRounded, FavoriteBorderRounded, FavoriteRounded } from "@material-ui/icons";
-
 
 const LikeComment = ({ setAlert, likes, comments, id }) => {
   const [liked, setLiked] = useState(false);
@@ -73,9 +75,7 @@ const LikeComment = ({ setAlert, likes, comments, id }) => {
       </div>
     );
 };
-
 LikeComment.propTypes = {
     setAlert: PropTypes.func.isRequired
 }
-
 export default connect(null, { setAlert })(LikeComment);

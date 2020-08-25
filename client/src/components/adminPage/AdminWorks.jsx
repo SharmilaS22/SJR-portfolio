@@ -1,11 +1,10 @@
 import React, {useState} from "react";
 import PropTypes from "prop-types";
+import { Box, AppBar, Tabs, Tab } from "@material-ui/core";
 
 import AddTab from "./AddTab";
 import RemoveTab from "./RemoveTab";
 import UpdateTab from "./UpdateTab";
-
-import { Box, AppBar, Tabs, Tab } from "@material-ui/core";
 
 //panel on the tab
 const TabPanel = ({ children, index, value }) => {
@@ -23,7 +22,6 @@ TabPanel.propTypes = {
     index: PropTypes.any.isRequired,
     value: PropTypes.any.isRequired
 };
-
 //setting a11y props
 const a11yProps = (ind) => {
     return {
@@ -31,13 +29,11 @@ const a11yProps = (ind) => {
         "aria-controls": `simple-tabpanel-${ind}`
     };
 };
-
 const AdminWorks = () => {
     const [value, setValue] = useState(0);
     const handleChange = (e, targetValue) => {
         setValue(targetValue)
     };
-
     return (
       <div>
         <AppBar position='static'>
@@ -59,5 +55,4 @@ const AdminWorks = () => {
       </div>
     );
 };
-
 export default AdminWorks;
