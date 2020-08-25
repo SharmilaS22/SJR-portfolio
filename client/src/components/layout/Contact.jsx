@@ -21,8 +21,24 @@ const Contact = () => {
         });
     }
     const { name, email, message } = client;
-    const handleSubmit = (event) => {
-        event.preventDefault();    
+    const handleSubmit = async (event) => {
+      event.preventDefault(); 
+      try {
+        const config = {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        };
+        const body = JSON.stringify({
+          name: name,
+          email: email,
+          message: message,
+        });
+        const { msg, type } = await axios.post("/api/client", body, config).then(resp => resp.data).catch(err => console.log(err));
+        setAlert(msg, type);
+      } catch (err) {
+        console.log(err);
+      }
         setClient({
           name: "",
           email: "",
