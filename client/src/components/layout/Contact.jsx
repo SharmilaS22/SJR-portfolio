@@ -1,11 +1,14 @@
 import React from "react";
-
 import { TextField, Grid, Paper } from "@material-ui/core";
 import SendIcon from "@material-ui/icons/Send";
 
+import { connect } from "react-redux";
 import axios from "axios";
+import PropTypes from "prop-types";
+import { setAlert } from "../../actions/alert";
+import Social from "./Social";
 
-const Contact = () => {
+const Contact = ({setAlert}) => {
     const [client, setClient] = React.useState({
       name: "",
       email: "",
@@ -97,8 +100,12 @@ const Contact = () => {
             </form>
           </Paper>
         </Grid>
+        <Social />
       </div>
     </div>
   );
 };
-export default Contact;
+Contact.propTypes = {
+  setAlert: PropTypes.func.isRequired
+}
+export default connect(null, {setAlert})(Contact);

@@ -24,14 +24,14 @@ function App() {
             <div>
               <Navbar />
               <Route exact path='/' component={Home} />
-              <Container maxWidth='md'>
-                <Switch>
+              <Switch>
+                <Container maxWidth='md'>
                   <Route exact path='/admin' component={AdminWorks} />
                   <Route exact path='/auth' component={Login} />
                   <Route exact path='/:id' component={Display} />
-                </Switch>
-                <AlertBox />
-              </Container>
+                </Container>
+              </Switch>
+              <AlertBox />
               <Contact />
             </div>
           </Router>

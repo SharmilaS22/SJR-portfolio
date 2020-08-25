@@ -25,7 +25,7 @@ const Work = () => {
 
       <div className='container'>
         <div className='d-flex justify-content-around flex-wrap'>
-          {works.map((work) => {
+          {works.length !== 0 && works.map((work) => {
             return (
               <Card
                 key={work._id}
