@@ -67,7 +67,7 @@ const UpdateTab = ({ setAlert }) => {
             <TableBody>
               <TableRow>
                 <TableCell component='th' scope='row'>
-                  <h5>Title</h5>
+                  <p>Title</p>
                 </TableCell>
                 <TableCell>
                   {isUpdated && (
@@ -85,7 +85,7 @@ const UpdateTab = ({ setAlert }) => {
               </TableRow>
               <TableRow>
                 <TableCell component='th' scope='row'>
-                  <h5>Image Link</h5>
+                  <p>Image Link</p>
                 </TableCell>
                 <TableCell>
                   {isUpdated && (
@@ -103,7 +103,7 @@ const UpdateTab = ({ setAlert }) => {
               </TableRow>
               <TableRow>
                 <TableCell component='th' scope='row'>
-                  <h5>Content</h5>
+                  <p>Content</p>
                 </TableCell>
                 <TableCell>
                   {isUpdated && (

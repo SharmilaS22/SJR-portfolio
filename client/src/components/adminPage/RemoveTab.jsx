@@ -44,19 +44,19 @@ const RemoveTab = ({ setAlert }) => {
                     <TableBody>
                         <TableRow>
                             <TableCell component='th' scope='row'>
-                                <h5> Title</h5>
+                                <p> Title</p>
                             </TableCell>
                             <TableCell>{poem.title}</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell component='th' scope='row'>
-                                <h5>Image Link</h5>
+                                <p>Image Link</p>
                             </TableCell>
                             <TableCell>{poem.imageurl}</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell component='th' scope='row'>
-                                <h5>Content</h5>
+                                <p>Content</p>
                             </TableCell>
                             <TableCell>{poem.content}</TableCell>
                         </TableRow>

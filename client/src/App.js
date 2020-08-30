@@ -28,7 +28,7 @@ function App() {
                 <Container maxWidth='md'>
                   <Route exact path='/admin' component={AdminWorks} />
                   <Route exact path='/auth' component={Login} />
-                  <Route exact path='/:id' component={Display} />
+                  <Route exact path='/work/:id' component={Display} />
                 </Container>
               </Switch>
               <AlertBox />
