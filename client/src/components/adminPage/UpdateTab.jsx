@@ -90,7 +90,7 @@ const UpdateTab = ({ setAlert }) => {
                 <TableCell>
                   {isUpdated && (
                     <TextField
-                      id='title-update'
+                      id='image-update'
                       label='Image'
                       color='secondary'
                       variant='outlined'

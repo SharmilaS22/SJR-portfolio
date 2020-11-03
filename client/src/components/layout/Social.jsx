@@ -10,7 +10,7 @@ const Social = () => {
       </div>
       <h4 className='text-muted my-4'>Sharon JR © 2020</h4>
       <h5 className=''>
-        <a className='text-light-theme' style={{ textDecoration: 'none'}} href='https://glacial-coast-93733.herokuapp.com/'>
+        <a className='text-light-theme' style={{ textDecoration: 'none'}} href='https://sharmila-s.herokuapp.com/'>
           Site made by <u>Sharmila S</u>
         </a>
       </h5>

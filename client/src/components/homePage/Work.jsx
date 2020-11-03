@@ -32,7 +32,7 @@ const Work = () => {
                 id={work._id}
                 title={work.title}
                 imageurl={work.image}
-                content={work.content.substring(0, 100)}
+                content={work.content.substring(0, 20)}
                 imagealt={work.title}
                 time={work.time}
               />
