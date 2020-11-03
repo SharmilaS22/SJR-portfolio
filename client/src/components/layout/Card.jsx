@@ -7,7 +7,7 @@ import { Button } from "@material-ui/core";
 const Card = ({ title, imageurl, imagealt, content, time, id }) => {
   return (
     <div className='card adjust-width my-2 shadow'>
-      <img className='card-img-top' src={imageurl} alt={imagealt} />
+      <img className='card-img-top' src={imageurl} alt={imagealt} height={50} />
       <div className='card-body'>
         <h5 className='card-title'>{title}</h5>
         <h6 className='card-subtitle mb-2 text-muted'>{time}</h6>
